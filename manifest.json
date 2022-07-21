@@ -1,0 +1,12 @@
+{
+    "manifest_version": 2,
+    "name": "A2HP Image Compressor",
+    "description": "Compress Image through Client side",
+    "version": "1.0.0",
+    "icons": {"128":"images/A2HP150.png"},
+    "browser_action": {
+        "default_icon": "images/A2HP19.png",
+        "default_popup": "index.html"
+    },
+    "permissions": ["activeTab"]
+}
