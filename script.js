@@ -70,7 +70,7 @@ function Compress(q, w, h){
                 var w = img.width;
                 var h = img.height;
                 // give metedata of output file
-                outputMetedata.getElementsByTagName('li')[0].getElementsByTagName('span')[0].innerHTML = ((((q*100)-99))+((q*100)/100)*10).toFixed(0) + '%';
+                outputMetedata.getElementsByTagName('li')[0].getElementsByTagName('span')[0].innerHTML = (((((q*100)-99))+((q*100)/100)*10)-9.5  ).toFixed(0) + '%';
                 outputMetedata.getElementsByTagName('li')[1].getElementsByTagName('span')[0].innerHTML = w + '/' + h;
                 outputMetedata.getElementsByTagName('li')[2].getElementsByTagName('span')[0].innerHTML = (result.size/1024).toFixed(0) + 'Kb';
             }
@@ -78,7 +78,7 @@ function Compress(q, w, h){
                 var filename = upload.getAttribute('filename').split('.');
                 var a = document.createElement('a');
                 a.href = url;
-                a.download = filename[0] + '-min.' + filename[1];
+                a.download = filename[0] + '-compressed.' + filename[1];
                 a.click();
             }
         },
